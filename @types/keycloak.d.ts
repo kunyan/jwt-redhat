@@ -372,7 +372,7 @@ declare namespace Keycloak {
 		 * Returns the URL to login form.
 		 * @param options Supports same options as Keycloak#login.
 		 */
-		createLoginUrl(options?: KeycloakLoginOptions): string;
+		createLoginUrl(options?: KeycloakLoginOptions, encodeHash?: boolean): string;
 
 		/**
 		 * Returns the URL to logout the user.

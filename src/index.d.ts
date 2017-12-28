@@ -19,7 +19,7 @@ declare namespace Jwt {
     export function hasRole(...roles: string[]): boolean;
     export function isInternal(): boolean;
     export function getRegisterUrl(): string;
-    export function getLoginUrl(options?: ILoginOptions): string;
+    export function getLoginUrl(options?: ILoginOptions, encodeHash?: boolean): string;
     export function getLogoutUrl(): string;
     export function getAccountUrl(): string;
     export function getToken(): IToken;

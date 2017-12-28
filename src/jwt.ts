@@ -1,4 +1,4 @@
-const Keycloak          = require('./keycloak');
+const Keycloak          = require('keycloak-js');
 import { Keycloak }     from '../@types/keycloak';
 
 import {
@@ -974,10 +974,10 @@ function getRegisterUrl() {
  * @return {String} the URL to the login page
  * @memberof module:jwt
  */
-function getLoginUrl(options: ILoginOptions = {}): string {
+function getLoginUrl(options: ILoginOptions = {}, encodeHash?: boolean): string {
     const redirectUri = options.redirectUri || location.href;
     options.redirectUri = redirectUri;
-    return state.keycloak.createLoginUrl(options);
+    return state.keycloak.createLoginUrl(options, encodeHash);
 }
 
 /**
